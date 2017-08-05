@@ -9,16 +9,16 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="26.33371mm"
-   height="23.06447mm"
-   viewBox="0 0 26.33371 23.06447"
+   width="80.620491mm"
+   height="68.572472mm"
+   viewBox="0 0 80.620492 68.572471"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.1 r15371"
    sodipodi:docname="logo_v1.svg"
-   inkscape:export-filename="C:\Users\kiran\git-clones\CodeDoesGood\HelpingHands\art-work\HH-icons\HH_v1.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
+   inkscape:export-filename="C:\Users\kiran\git-clones\CodeDoesGood\HelpingHands\art-work\HH-icons\ic_helpinghands_white_48dp.png"
+   inkscape:export-xdpi="48"
+   inkscape:export-ydpi="48">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="21.30228"
-     inkscape:cy="80.141007"
+     inkscape:zoom="1.979899"
+     inkscape:cx="232.76624"
+     inkscape:cy="103.2446"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -48,8 +48,8 @@
     <inkscape:grid
        type="xygrid"
        id="grid4506"
-       originx="203.30261"
-       originy="-292.40244" />
+       originx="258.03415"
+       originy="-294.93004" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -67,10 +67,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(203.30259,18.466909)">
+     transform="translate(258.03413,66.502498)">
     <g
        id="g4521"
-       transform="translate(32.778982,6.2836155)"
+       transform="matrix(3.6852705,0,0,3.6852705,603.5089,16.529328)"
        style="fill:#ffffff;fill-opacity:1;stroke:none"
        inkscape:export-xdpi="48"
        inkscape:export-ydpi="48">

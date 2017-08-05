@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">HelpingHands</string>
 
+    <!-- First Page -->
     <string name="first_page_description">Connecting newly landed refugees with free services, free items, and jobs they can apply for.</string>
+    <string name="selector_button_string_quick_tour">Take a Quick Tour</string>
+    <string name="selector_button_string_continue_sign_in">or sign in with existing account</string>
+
 </resources>
