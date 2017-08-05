@@ -1,7 +1,6 @@
 # HelpingHands
 Connecting newly landed refugees with free services, free items, and jobs they can apply for.
 
-![Image of Yaktocat](https://github.com/CodeDoesGood/HelpingHands/blob/master/art-work/SocialBanners/HelpingHands_banner.png)
 
 ## Description
 Canada has been a welcoming place for refugees. However, there is no system for connecting donor Canadians with refugees who needs help for things like furniture, jobs and services (nanny services, retail jobs, etc). 
