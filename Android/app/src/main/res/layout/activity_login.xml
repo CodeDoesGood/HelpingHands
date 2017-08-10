@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    tools:context="helpinghands.codedoesgood.org.helpinghands.LoginActivity">
+
+    <TextView
+        android:id="@+id/login_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="@string/welcome"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_welcome"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/login_title"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/login_guide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/login_guide"
+            android:textColor="@android:color/white"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/login_input_mobile"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:layout_below="@id/login_guide"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:hint="@string/hint_mobile_input"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/colorHint" />
+
+        <Button
+            android:id="@+id/login_button_action"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_white"
+            android:layout_below="@id/login_input_mobile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/login_button_send_code"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

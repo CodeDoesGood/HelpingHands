@@ -1,5 +1,6 @@
 package helpinghands.codedoesgood.org.helpinghands;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -42,8 +43,11 @@ public class FirstPageActivity extends AppCompatActivity
                 Log.d(TAG,"Clicked on button 'Take a Quick Tour'.");
                 break;
 
-            case R.id.continue_with_sign_in:
+            case R.id.continue_with_sign_in_button:
                 Log.d(TAG,"Clicked on button 'Sign in with existing account'");
+                Intent loginActivity = new Intent(this, LoginActivity.class);
+                startActivity(loginActivity);
+                finish();
                 break;
         }
     }

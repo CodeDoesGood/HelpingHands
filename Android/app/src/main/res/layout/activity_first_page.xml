@@ -57,7 +57,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:background="@drawable/selector_button_quick_tour"
-        android:layout_above="@id/continue_with_sign_in"
+        android:layout_above="@id/continue_with_sign_in_button"
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:layout_marginBottom="10dp"

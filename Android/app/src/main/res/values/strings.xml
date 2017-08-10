@@ -6,4 +6,11 @@
     <string name="selector_button_string_quick_tour">Take a Quick Tour</string>
     <string name="selector_button_string_continue_sign_in">or sign in with existing account</string>
 
+    <string name="welcome">Welcome</string>
+    <string name="login_title">Log in</string>
+    <string name="login_guide">Helping Hands will send an SMS message to verify your phone number. Please enter your phone number.</string>
+    <string name="hint_mobile_input">Enter mobile number</string>
+    <string name="login_button_send_code">Send</string>
+    <string name="login_button_submit_code">Submit</string>
+
 </resources>
