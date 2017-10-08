@@ -65,6 +65,9 @@ public class FirstPageActivity extends AppCompatActivity
                 if(resultCode == RESULT_OK){
                     // Result OK, start Home activity
                     Log.d(TAG,"RESULT OK");
+                    Intent intent = new Intent(FirstPageActivity.this, Home.class);
+                    startActivity(intent);
+                    finish();
                 }
             break;
 

@@ -117,11 +117,22 @@ public class LoginActivity extends AppCompatActivity
         @Override
         public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
+
+            Button buttonSubmit = (Button) getActivity().findViewById(R.id.login_fragment_button_verify);
+            buttonSubmit.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
+            switch (view.getId()){
+                case R.id.login_fragment_button_verify:
+                    getActivity().setResult(RESULT_OK);
+                    getActivity().finish();
+                    break;
 
+                default:
+                    break;
+            }
         }
     }
 }
