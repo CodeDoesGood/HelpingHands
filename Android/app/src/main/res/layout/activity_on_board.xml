@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_first_page"
-    android:alpha="0.5"
+    android:background="@color/colorPrimary"
     tools:context="helpinghands.codedoesgood.org.helpinghands.OnBoardActivity">
 
     

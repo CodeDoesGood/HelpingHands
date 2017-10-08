@@ -1,5 +1,6 @@
 package helpinghands.codedoesgood.org.helpinghands;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
@@ -13,12 +14,17 @@ public class FirstPageActivity extends AppCompatActivity
     implements View.OnClickListener{
 
     private static final String TAG = FirstPageActivity.class.getSimpleName();
+    private static final int REQUEST_LOGIN = 384;
+    private static final int REQUEST_ONBOARD = 981;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_page);
+        init();
+    }
 
+    private void init(){
         // get reference objects from view
         TextView titleText = (TextView) findViewById(R.id.title_first_page);
         TextView descriptionText = (TextView) findViewById(R.id.description_first_page);
@@ -26,10 +32,10 @@ public class FirstPageActivity extends AppCompatActivity
         Button continueSignInButton = (Button) findViewById(R.id.continue_with_sign_in_button);
 
         // Apply font
-        titleText.setTypeface(Typeface.createFromAsset(getApplicationContext().getAssets(),String.format("fonts/Lato/Lato-Bold.ttf")));
-        descriptionText.setTypeface(Typeface.createFromAsset(getApplicationContext().getAssets(),String.format("fonts/Lato/Lato-Regular.ttf")));
-        quickTourButton.setTypeface(Typeface.createFromAsset(getApplicationContext().getAssets(),String.format("fonts/Lato/Lato-Light.ttf")));
-        continueSignInButton.setTypeface(Typeface.createFromAsset(getApplicationContext().getAssets(),String.format("fonts/Lato/Lato-Bold.ttf")));
+        titleText.setTypeface(Typeface.createFromAsset(getApplicationContext().getAssets(),"fonts/Lato/Lato-Bold.ttf"));
+        descriptionText.setTypeface(Typeface.createFromAsset(getApplicationContext().getAssets(),"fonts/Lato/Lato-Regular.ttf"));
+        quickTourButton.setTypeface(Typeface.createFromAsset(getApplicationContext().getAssets(),"fonts/Lato/Lato-Light.ttf"));
+        continueSignInButton.setTypeface(Typeface.createFromAsset(getApplicationContext().getAssets(),"fonts/Lato/Lato-Bold.ttf"));
 
         // Register button on click listeners
         quickTourButton.setOnClickListener(this);
@@ -46,8 +52,23 @@ public class FirstPageActivity extends AppCompatActivity
             case R.id.continue_with_sign_in_button:
                 Log.d(TAG,"Clicked on button 'Sign in with existing account'");
                 Intent loginActivity = new Intent(this, LoginActivity.class);
-                startActivity(loginActivity);
-                finish();
+                startActivityForResult(loginActivity,REQUEST_LOGIN);
+                break;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode){
+            case REQUEST_LOGIN:
+                if(resultCode == RESULT_OK){
+                    // Result OK, start Home activity
+                    Log.d(TAG,"RESULT OK");
+                }
+            break;
+
+            case REQUEST_ONBOARD:
                 break;
         }
     }

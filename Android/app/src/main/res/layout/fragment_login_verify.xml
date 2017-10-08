@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/login_fragment_verify_guide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/login_verify_guide"
+        android:textColor="@android:color/white"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/login_fragment_input_code"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edittext"
+        android:layout_below="@id/login_fragment_verify_guide"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="@string/hint_verify_input"
+        android:inputType="phone"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/colorHint" />
+
+    <Button
+        android:id="@+id/login_fragment_button_verify"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button_white"
+        android:layout_below="@id/login_fragment_input_code"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/login_button_submit_code"/>
+
+    <Button
+        android:id="@+id/login_fragment_button_back"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/login_fragment_button_verify"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/login_button_back"
+        android:textColor="@android:color/white"/>
+
+</RelativeLayout>

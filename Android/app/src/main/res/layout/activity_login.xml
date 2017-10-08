@@ -4,8 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_login"
+    android:background="@color/colorPrimary"
     tools:context="helpinghands.codedoesgood.org.helpinghands.LoginActivity">
+
+    <ImageButton
+        android:id="@+id/login_button_close"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:padding="12dp"
+        android:src="@drawable/ic_close_white_24"/>
 
     <TextView
         android:id="@+id/login_welcome"
@@ -30,46 +40,10 @@
         android:textColor="@android:color/white"
         android:textSize="15sp"/>
 
-    <RelativeLayout
+    <FrameLayout
+        android:id="@+id/login_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
-
-        <TextView
-            android:id="@+id/login_guide"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/login_guide"
-            android:textColor="@android:color/white"
-            android:padding="10dp"/>
-
-        <EditText
-            android:id="@+id/login_input_mobile"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_edittext"
-            android:layout_below="@id/login_guide"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:hint="@string/hint_mobile_input"
-            android:inputType="phone"
-            android:padding="10dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@color/colorHint" />
-
-        <Button
-            android:id="@+id/login_button_action"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_button_white"
-            android:layout_below="@id/login_input_mobile"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="@string/login_button_send_code"/>
-
-    </RelativeLayout>
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>
