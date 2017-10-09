@@ -24,4 +24,9 @@
     <string name="title_post">Post</string>
     <string name="title_settings">Settings</string>
 
+    <!-- General names and titles -->
+    <string name="about_us">About us</string>
+    <string name="view_card">View as card</string>
+    <string name="view_grid">View as grid</string>
+
 </resources>
