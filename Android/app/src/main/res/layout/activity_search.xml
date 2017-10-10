@@ -16,6 +16,25 @@
         app:contentInsetLeft="0dp"
         app:contentInsetStart="0dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageButton
+            android:id="@+id/search_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_white_24dp"
+            android:background="@android:color/transparent"
+            android:padding="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColorHint="@color/colorHint"
+            android:textColor="@android:color/white"
+            android:textCursorDrawable="@null"
+            android:hint="@string/hint_search"/>
+
+    </android.support.v7.widget.Toolbar>
 
 </RelativeLayout>

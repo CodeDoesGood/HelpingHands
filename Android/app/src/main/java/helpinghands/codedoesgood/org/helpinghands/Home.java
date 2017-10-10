@@ -34,7 +34,7 @@ public class Home extends AppCompatActivity
     private void init(){
         // initialize home toolbar
         homeToolbar = (Toolbar) findViewById(R.id.home_toolbar);
-        homeToolbar.setTitle("Helping Hands");
+        homeToolbar.setTitle(getText(R.string.title_home));
         homeToolbar.setTitleTextColor(Color.parseColor("#ffffff"));
         homeToolbar.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.colorPrimary,null));
         homeToolbar.setNavigationIcon(R.drawable.ic_helping_hands);
@@ -78,6 +78,8 @@ public class Home extends AppCompatActivity
         );
 
         optionTabs.addOnTabSelectedListener(this);
+
+
     }
 
     @Override
@@ -95,27 +97,26 @@ public class Home extends AppCompatActivity
             if(stringSelectedTab.equals(getString(R.string.title_home))){
                 // On home tab selected
                 if(setSelectedTab(0)){
-
+                    homeToolbar.setTitle(getText(R.string.title_home));
                 }
             }else if(stringSelectedTab.equals(getString(R.string.title_search))) {
                 // On search tab selected
                 if(setSelectedTab(1)){
-
                 }
             }else if(stringSelectedTab.equals(getString(R.string.title_favourite))){
                 // On favourite tab selected
                 if(setSelectedTab(2)){
-
+                    homeToolbar.setTitle(getText(R.string.title_favourite));
                 }
             }else if(stringSelectedTab.equals(getString(R.string.title_post))){
                 // On post tab selected
                 if(setSelectedTab(3)){
-
+                    homeToolbar.setTitle(getText(R.string.title_post));
                 }
             }else if(stringSelectedTab.equals(getString(R.string.title_settings))){
                 // On settings tab selected
                 if(setSelectedTab(4)){
-
+                    homeToolbar.setTitle(getText(R.string.title_settings));
                 }
             }
         }catch (NullPointerException e){
@@ -125,7 +126,11 @@ public class Home extends AppCompatActivity
 
     @Override
     public void onTabReselected(TabLayout.Tab tab) {
+        String reselectedTab = tab.getText().toString();
 
+        if(reselectedTab.equals(getString(R.string.title_search))){
+            openSearchActivity();
+        }
     }
 
     @Override
@@ -161,8 +166,7 @@ public class Home extends AppCompatActivity
                         break;
                     case 1:
                         optionTabs.getTabAt(index).setIcon(R.drawable.ic_search_primary_24dp);
-                        Intent searchIntent = new Intent(Home.this, Search.class);
-                        startActivityForResult(searchIntent,REQUEST_SEARCH);
+                        openSearchActivity();
                         break;
                     case 2:
                         optionTabs.getTabAt(index).setIcon(R.drawable.ic_favourite_primary_24dp);
@@ -191,9 +195,21 @@ public class Home extends AppCompatActivity
         switch (requestCode){
             case REQUEST_SEARCH:
                 // On Search Activity Result
+                TabLayout.Tab tab = optionTabs.getTabAt(0);
+                try {
+                    tab.select();
+                }catch (NullPointerException e){
+                    e.printStackTrace();
+                }
+                setSelectedTab(0);
                 break;
             default:
                 break;
         }
+    }
+
+    private void openSearchActivity(){
+        Intent searchIntent = new Intent(Home.this, Search.class);
+        startActivityForResult(searchIntent,REQUEST_SEARCH);
     }
 }

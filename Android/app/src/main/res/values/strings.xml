@@ -21,12 +21,16 @@
     <string name="title_home">Home</string>
     <string name="title_search">Search</string>
     <string name="title_favourite">Favourite</string>
-    <string name="title_post">Post</string>
+    <string name="title_post">New post</string>
     <string name="title_settings">Settings</string>
 
-    <!-- General names and titles -->
+    <!-- options -->
     <string name="about_us">About us</string>
     <string name="view_card">View as card</string>
     <string name="view_grid">View as grid</string>
+    <string name="send">Send</string>
+
+    <!-- Hint -->
+    <string name="hint_search">Search</string>
 
 </resources>
