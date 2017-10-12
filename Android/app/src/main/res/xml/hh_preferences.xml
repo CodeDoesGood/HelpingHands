@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/pref_category_general"
+        android:textSize="14sp">
+
+        <android.support.v7.preference.Preference
+            android:key="key_settings_account"
+            android:textSize="12sp"
+            android:title="@string/pref_title_account" />
+
+        <android.support.v7.preference.ListPreference
+            android:defaultValue="3"
+            android:dialogTitle="@string/pref_title_current_location"
+            android:entries="@array/pref_upload_quality_entries"
+            android:entryValues="@array/pref_upload_quality_values"
+            android:key="key_settings_location"
+            android:summary="@string/pref_summary_current_location"
+            android:title="@string/pref_title_current_location" />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/pref_category_discovery_settings"
+        android:textSize="14sp">
+
+        <android.support.v7.preference.ListPreference
+            android:defaultValue="3"
+            android:dialogTitle="@string/pref_title_maximum_distance"
+            android:entries="@array/pref_upload_quality_entries"
+            android:entryValues="@array/pref_upload_quality_values"
+            android:key="key_settings_max_distance"
+            android:summary="@string/pref_summary_maximum_distance"
+            android:title="@string/pref_title_maximum_distance" />
+
+        <android.support.v7.preference.CheckBoxPreference
+            android:key="key_settings_show_profile"
+            android:summary="@string/pref_summary_stat_show_profile"
+            android:title="@string/pref_title_stat_show_profile"
+            android:defaultValue="true"/>
+
+    </android.support.v7.preference.PreferenceCategory>
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/pref_category_post_settings"
+        android:textSize="14sp">
+
+        <android.support.v7.preference.CheckBoxPreference
+            android:key="key_settings_post_new_job"
+            android:title="@string/pref_title_new_jobs"
+            android:defaultValue="true"/>
+
+        <android.support.v7.preference.CheckBoxPreference
+            android:key="key_settings_post_messages"
+            android:title="@string/pref_title_messages"
+            android:defaultValue="true"/>
+
+        <android.support.v7.preference.CheckBoxPreference
+            android:key="key_settings_post_new_free_listing"
+            android:title="@string/pref_title_new_free_listings"
+            android:defaultValue="true"/>
+
+        <android.support.v7.preference.CheckBoxPreference
+            android:key="key_settings_post_in_app_sounds"
+            android:title="@string/pref_title_in_app_sounds"
+            android:defaultValue="true"/>
+
+    </android.support.v7.preference.PreferenceCategory>
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/pref_category_contact_us"
+        android:textSize="14sp">
+
+        <android.support.v7.preference.Preference
+            android:key="key_settings_help_support"
+            android:title="@string/pref_title_help_support" />
+
+        <android.support.v7.preference.Preference
+            android:key="key_settings_rate_us"
+            android:title="@string/pref_title_rate_us" />
+
+        <android.support.v7.preference.Preference
+            android:key="key_settings_share_hh"
+            android:title="@string/pref_title_share_hh" />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/pref_category_legal"
+        android:textSize="14sp">
+
+        <android.support.v7.preference.Preference
+            android:key="key_settings_privacy_policy"
+            android:title="@string/pref_title_privacy_policy" />
+
+        <android.support.v7.preference.Preference
+            android:key="key_settings_terms_of_service"
+            android:title="@string/pref_title_terms_of_services" />
+
+        <android.support.v7.preference.Preference
+            android:key="key_settings_licenses"
+            android:title="@string/pref_title_licenses" />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+
+    <android.support.v7.preference.PreferenceCategory
+        android:textSize="14sp">
+
+        <android.support.v7.preference.Preference
+            android:key="key_settings_logout"
+            android:title="@string/pref_title_logout"
+            android:textColor="@android:color/holo_red_dark"/>
+
+        <android.support.v7.preference.Preference
+            android:key="key_settings_delete"
+            android:title="@string/pref_title_delete" />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+</android.support.v7.preference.PreferenceScreen>

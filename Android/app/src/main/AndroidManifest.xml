@@ -31,12 +31,19 @@
         <activity
             android:name=".FirstPageActivity"
             android:screenOrientation="portrait" />
+
+        <!-- Login Activity -->
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
+
+        <!-- Home Activity -->
         <activity android:name=".Home" />
-        <activity android:name=".Search"></activity>
+
+        <!-- Search Activity -->
+        <activity android:name=".Search"/>
+
     </application>
 
 </manifest>

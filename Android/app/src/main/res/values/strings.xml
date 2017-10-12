@@ -33,4 +33,57 @@
     <!-- Hint -->
     <string name="hint_search">Search</string>
 
+    <!-- Preferences -->
+        <!-- Preferences: GENERAL -->
+        <string name="pref_category_general">GENERAL</string>
+        <string name="pref_title_account">Account</string>
+        <string name="pref_title_current_location">Current Location</string>
+        <string name="pref_summary_current_location">Torrento, Canada</string>
+
+        <!-- Preferences: GENERAL -->
+        <string name="pref_category_discovery_settings">DISCOVERY SETTINGS</string>
+        <string name="pref_title_maximum_distance">Maximum Distance</string>
+        <string name="pref_summary_maximum_distance">50ml</string>
+        <string name="pref_title_stat_show_profile">Show My Profile Status</string>
+        <string name="pref_summary_stat_show_profile">Turning this ON will show your profile status to other users near you.</string>
+
+        <!-- Preferences: POST SETTINGS -->
+        <string name="pref_category_post_settings">POST SETTINGS</string>
+        <string name="pref_title_new_jobs">New Jobs</string>
+        <string name="pref_title_messages">Messages</string>
+        <string name="pref_title_new_free_listings">New Free Listings</string>
+        <string name="pref_title_in_app_sounds">In-App Sounds</string>
+
+        <!-- Preferences: CONTACT US -->
+        <string name="pref_category_contact_us">CONTACT US</string>
+        <string name="pref_title_help_support">Help and Support</string>
+        <string name="pref_title_rate_us">Rate Us</string>
+        <string name="pref_title_share_hh">Sharing Helping Hands</string>
+
+        <!-- Preferences: LEGAL -->
+        <string name="pref_category_legal">LEGAL</string>
+        <string name="pref_title_privacy_policy">Privacy Policy</string>
+        <string name="pref_title_terms_of_services">Terms of Service</string>
+        <string name="pref_title_licenses">Licenses</string>
+
+        <string name="pref_title_logout">Logout</string>
+        <string name="pref_title_delete">Delete Account</string>
+
+
+
+    <string-array name="pref_upload_quality_entries">
+        <item>360p</item>
+        <item>480p</item>
+        <item>720p</item>
+        <item>1080p</item>
+        <item>Original</item>
+    </string-array>
+    <string-array name="pref_upload_quality_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
 </resources>

@@ -2,14 +2,20 @@ package helpinghands.codedoesgood.org.helpinghands;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.preference.PreferenceFragmentCompat;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
@@ -22,6 +28,7 @@ public class Home extends AppCompatActivity
     private TabLayout optionTabs;
     private Toolbar homeToolbar;
     private static final int REQUEST_SEARCH = 253;
+    private FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +39,9 @@ public class Home extends AppCompatActivity
     }
 
     private void init(){
+        // Get Fragment Manager
+        fragmentManager = getSupportFragmentManager();
+
         // initialize home toolbar
         homeToolbar = (Toolbar) findViewById(R.id.home_toolbar);
         homeToolbar.setTitle(getText(R.string.title_home));
@@ -78,8 +88,6 @@ public class Home extends AppCompatActivity
         );
 
         optionTabs.addOnTabSelectedListener(this);
-
-
     }
 
     @Override
@@ -98,6 +106,7 @@ public class Home extends AppCompatActivity
                 // On home tab selected
                 if(setSelectedTab(0)){
                     homeToolbar.setTitle(getText(R.string.title_home));
+                    setFragment(getText(R.string.title_home).toString());
                 }
             }else if(stringSelectedTab.equals(getString(R.string.title_search))) {
                 // On search tab selected
@@ -107,11 +116,13 @@ public class Home extends AppCompatActivity
                 // On favourite tab selected
                 if(setSelectedTab(2)){
                     homeToolbar.setTitle(getText(R.string.title_favourite));
+                    setFragment(getText(R.string.title_favourite).toString());
                 }
             }else if(stringSelectedTab.equals(getString(R.string.title_post))){
                 // On post tab selected
                 if(setSelectedTab(3)){
                     homeToolbar.setTitle(getText(R.string.title_post));
+                    setFragment(getText(R.string.title_post).toString());
                 }
             }else if(stringSelectedTab.equals(getString(R.string.title_settings))){
                 // On settings tab selected
@@ -176,6 +187,7 @@ public class Home extends AppCompatActivity
                         break;
                     case 4:
                         optionTabs.getTabAt(index).setIcon(R.drawable.ic_settings_primary_24dp);
+                        showSettingsActivity();
                         break;
                 }
 
@@ -212,4 +224,92 @@ public class Home extends AppCompatActivity
         Intent searchIntent = new Intent(Home.this, Search.class);
         startActivityForResult(searchIntent,REQUEST_SEARCH);
     }
+
+    private void showSettingsActivity(){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.home_content,new SettingsFragment()).commit();
+    }
+
+    private void setFragment(String frag){
+        switch (frag){
+            case "Home":
+                fragmentManager.beginTransaction()
+                        .replace(R.id.home_content, new FragmentHome())
+                        .commit();
+                break;
+            case "Favourite":
+                fragmentManager.beginTransaction()
+                        .replace(R.id.home_content, new FragmentFavourite())
+                        .commit();
+                break;
+            case "New post":
+                fragmentManager.beginTransaction()
+                        .replace(R.id.home_content, new FragmentPost())
+                        .commit();
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    public static class SettingsFragment extends PreferenceFragmentCompat {
+
+        private String TAG = getClass().getSimpleName();
+
+        @Override
+        public void onCreatePreferences(Bundle bundle, String s) {
+            // Load the Preferences from the XML file
+            addPreferencesFromResource(R.xml.hh_preferences);
+        }
+
+        @Override
+        public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+            super.onViewCreated(view, savedInstanceState);
+            Log.d(TAG,"onViewCreated Preferences");
+        }
+    }
+
+    public static class FragmentHome extends Fragment {
+
+        @Nullable
+        @Override
+        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+            return inflater.inflate(R.layout.fragment_home,container,false);
+        }
+
+        @Override
+        public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+            super.onViewCreated(view, savedInstanceState);
+        }
+    }
+
+    public static class FragmentFavourite extends Fragment {
+
+        @Nullable
+        @Override
+        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+            return inflater.inflate(R.layout.fragment_favourite,container,false);
+        }
+
+        @Override
+        public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+            super.onViewCreated(view, savedInstanceState);
+        }
+    }
+
+    public static class FragmentPost extends Fragment {
+
+        @Nullable
+        @Override
+        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+            return inflater.inflate(R.layout.fragment_post,container,false);
+        }
+
+        @Override
+        public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+            super.onViewCreated(view, savedInstanceState);
+        }
+    }
+
 }
